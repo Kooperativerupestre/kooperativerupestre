@@ -54,7 +54,7 @@ Building physics-based simulation systems with real-time interaction and emergen
 ### 📷 Contact
 
 <div>
-  <a href="https://www.instagram.com/ozen_p68?igsh=ZnVsMGk2bTl2eTU3" target="_blank">
+  <a href="https://www.instagram.com/enzodev.k?igsh=bG1nd2Ezb2VmdHNv" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white">
   </a>
 </div>
