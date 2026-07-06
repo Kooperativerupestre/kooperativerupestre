@@ -44,6 +44,8 @@ with the goal of working as a remote backend developer.
 - Emergent and dynamic systems (as a side interest)
 
 ---
+![Enzo's GitHub stats](https://github-readme-stats.vercel.app/api?username=kooperativerupestre&show_icons=true&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kooperativerupestre&layout=compact&theme=radical)
 
 ### 📷 Contact
 <div>
