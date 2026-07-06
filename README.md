@@ -33,7 +33,7 @@ with the goal of working as a remote backend developer.
 ---
 
 ### 🧪 Projects
-- **Schedule Manager** — multi-tenant appointment scheduling backend (Python, psycopg3 async, raw SQL, capability-based authorization)
+- **Schedule Manager** — multi-tenant appointment scheduling backend (Python, fastAPI, psycopg3 async, raw SQL, capability-based authorization)
 - **Karkinolution** — Python creature ecosystem simulator with emergent behavior modeling, tested with pytest and CI
 
 ---
@@ -44,8 +44,6 @@ with the goal of working as a remote backend developer.
 - Emergent and dynamic systems (as a side interest)
 
 ---
-![Enzo's GitHub stats](https://github-readme-stats.vercel.app/api?username=kooperativerupestre&show_icons=true&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kooperativerupestre&layout=compact&theme=radical)
 
 ### 📷 Contact
 <div>
