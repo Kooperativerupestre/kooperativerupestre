@@ -23,32 +23,28 @@
 
 ## <span style="color:#74458A">Problems & Engineering Concerns</span>
 
-Software involving the following classes of problems:
-
-* **Data integrity** — enforcing domain invariants at the database level instead of relying exclusively on application-side validation.
-* **Concurrency & consistency** — designing operations that remain correct when multiple actors access and modify shared state simultaneously.
-* **Backend architecture** — separating domain logic, persistence, transport, and authorization so individual components can evolve independently.
-* **Relational data modeling** — translating domain constraints into explicit PostgreSQL schemas, indexes, constraints, and transaction boundaries.
-* **Complex system behavior** — modeling systems where local rules, state transitions, and interactions produce non-trivial global behavior.
-* **Low-level resource management** — handling ownership, lifetime, memory, and data structures explicitly in C++.
-* **Spatial data organization** — structuring spatial data for efficient querying and interaction inside simulation environments.
+* **Data integrity** — enforcing domain invariants at the database level.
+* **Concurrency & consistency** — keeping shared state correct under simultaneous operations.
+* **Backend architecture** — separating responsibilities so systems can evolve without unnecessary coupling.
+* **Data modeling** — translating domain rules into explicit relational models and constraints.
+* **Complex system behavior** — designing systems where simple rules produce complex interactions.
+* **Low-level resource management** — handling ownership, lifetime, memory, and data structures explicitly.
+* **Spatial data** — organizing and querying spatial information efficiently.
 
 ## <span style="color:#8B3A4A">Projects</span>
 
 ### Schedule Manager
 
-Multi-tenant appointment scheduling backend built with Python, FastAPI, psycopg3, and raw PostgreSQL.
+Multi-tenant appointment scheduling backend built with Python, FastAPI, and PostgreSQL.
 
-Designed around problems involving concurrent scheduling, authorization, data integrity, and transaction correctness.
+Focused on concurrency, authorization, data integrity, and transaction correctness.
 
-* Scheduling conflicts enforced through PostgreSQL `GIST` exclusion constraints rather than application-side locking.
+* Scheduling conflicts enforced through PostgreSQL `GIST` exclusion constraints.
 * Capability-based authorization.
 * Cookie-based JWT authentication with Argon2 password hashing.
-* Asynchronous PostgreSQL access.
-* Redis-based infrastructure for distributed application concerns.
-* Layered service, repository, and router architecture.
-* Explicit handling of transaction and concurrency boundaries.
-* Automated testing covering concurrent behavior and database-dependent logic.
+* Redis integration for application infrastructure.
+* Layered architecture with explicit transaction boundaries.
+* Automated tests covering concurrent and database-dependent behavior.
 
 ### Karkinolution
 
@@ -56,33 +52,33 @@ Creature ecosystem simulator exploring emergent behavior from simple local rules
 
 Originally implemented in Python and currently being ported to C++.
 
-Designed around problems involving simulation architecture, state modeling, system decoupling, spatial representation, ownership, and complex interactions between independent systems.
+Focused on simulation architecture, state modeling, system decoupling, spatial representation, and complex interactions between independent systems.
 
 * Decoupled models for organism state, perception, physiology, and behavior.
 * Systems designed to allow new behaviors without restructuring existing components.
 * Custom data structures and spatial representations.
-* **R*-tree spatial indexing algorithm** for organizing and querying spatial data efficiently.
+* **R*-tree spatial indexing** for efficient spatial organization and queries.
 * Explicit C++ ownership and lifetime management.
 * Automated testing and continuous integration.
 
 ## <span style="color:#74458A">AI-Assisted Engineering</span>
 
-AI-assisted development is treated as an engineering tool for reducing implementation time while retaining human responsibility for architecture, correctness, and validation.
+AI is used as a development accelerator while architectural decisions, correctness, and validation remain under human control.
 
-Applicable uses include:
+Used for:
 
-* Exploring and comparing implementation approaches.
-* Accelerating routine implementation.
-* Generating and expanding test cases.
-* Debugging and analyzing unfamiliar behavior.
-* Refactoring and reviewing existing code.
-* Producing documentation and development artifacts.
+* Exploring implementation approaches.
+* Accelerating development.
+* Generating and expanding tests.
+* Debugging and refactoring.
+* Reviewing code and design decisions.
+* Producing development documentation.
 
-The relevant capability is not merely generating code, but integrating AI into an engineering workflow where generated results are reviewed, tested, constrained by the existing architecture, and validated against observable behavior.
+The focus is on integrating AI into real engineering workflows without outsourcing technical judgment.
 
 ## <span style="color:#8B3A4A">Development Focus</span>
 
-Data structures and algorithms, backend architecture, database design, concurrency, systems programming, and the interaction between software architecture and data integrity.
+Backend architecture, database design, concurrency, data structures and algorithms, systems programming, and software correctness.
 
 ---
 
@@ -101,4 +97,3 @@ Data structures and algorithms, backend architecture, database design, concurren
 <sub><span style="color:#74458A">Systems · Constraints · Correctness</span></sub>
 
 </div>
-
