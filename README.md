@@ -14,13 +14,13 @@
 
 <img src="https://img.shields.io/badge/Python-2b2b2b?style=flat-square&logo=python&logoColor=8B3A4A" height="32">
 <img src="https://img.shields.io/badge/C%2B%2B-2b2b2b?style=flat-square&logo=cplusplus&logoColor=8B3A4A" height="32">
+<img src="https://img.shields.io/badge/Go-2b2b2b?style=flat-square&logo=go&logoColor=8B3A4A" height="32">
 <img src="https://img.shields.io/badge/PostgreSQL-2b2b2b?style=flat-square&logo=postgresql&logoColor=8B3A4A" height="32">
 <img src="https://img.shields.io/badge/Docker-2b2b2b?style=flat-square&logo=docker&logoColor=8B3A4A" height="32">
 <img src="https://img.shields.io/badge/Linux-2b2b2b?style=flat-square&logo=linux&logoColor=8B3A4A" height="32">
 <img src="https://img.shields.io/badge/Redis-2b2b2b?style=flat-square&logo=redis&logoColor=8B3A4A" height="32">
 
 </div>
-
 ## <span style="color:#74458A">Problems & Engineering Concerns</span>
 
 * **Data integrity** — enforcing domain invariants at the database level.
