@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6d0e0e,50:5a1a5a,100:3d0e5c&height=180&section=header&text=Kooperative%20Rupestren&fontSize=42&fontColor=E8E8E8&animation=fadeIn&fontAlignY=40" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6d0e0e,50:5a1a5a,100:3d0e5c&height=180&section=header&text=Koöperative%20Rüpestrën&fontSize=42&fontColor=E8E8E8&animation=fadeIn&fontAlignY=40" width="100%"/>
 
 <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=8E8E93&center=true&vCenter=true&width=560&lines=Backend+Architecture+%26+Data+Modeling;Concurrency%2C+Consistency+%26+Systems+Design" alt="typing-svg" />
 
