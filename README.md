@@ -16,6 +16,7 @@
 <img src="https://img.shields.io/badge/C%2B%2B-2b2b2b?style=flat-square&logo=cplusplus&logoColor=8B3A4A" height="32">
 <img src="https://img.shields.io/badge/Go-2b2b2b?style=flat-square&logo=go&logoColor=8B3A4A" height="32">
 <img src="https://img.shields.io/badge/PostgreSQL-2b2b2b?style=flat-square&logo=postgresql&logoColor=8B3A4A" height="32">
+<img src="https://img.shields.io/badge/SQLite-2b2b2b?style=flat-square&logo=sqlite&logoColor=8B3A4A" height="32">
 <img src="https://img.shields.io/badge/Docker-2b2b2b?style=flat-square&logo=docker&logoColor=8B3A4A" height="32">
 <img src="https://img.shields.io/badge/Linux-2b2b2b?style=flat-square&logo=linux&logoColor=8B3A4A" height="32">
 <img src="https://img.shields.io/badge/Redis-2b2b2b?style=flat-square&logo=redis&logoColor=8B3A4A" height="32">
@@ -58,6 +59,7 @@ Focused on simulation architecture, state modeling, system decoupling, spatial r
 * Systems designed to allow new behaviors without restructuring existing components.
 * Custom data structures and spatial representations.
 * **R*-tree spatial indexing** for efficient spatial organization and queries.
+* *Octree spatial partitioning* for hierarchical 3D spatial organization and queries.
 * Explicit C++ ownership and lifetime management.
 * Automated testing and continuous integration.
 
