@@ -94,8 +94,14 @@ Backend architecture, database design, concurrency, data structures and algorith
 
 ---
 
+## <span style="color:#74458A">Language Distribution</span>
+
 <div align="center">
 
-<sub><span style="color:#74458A">Systems · Constraints · Correctness</span></sub>
+<img
+  src="./assets/languages.svg"
+  alt="Language distribution across repositories"
+  width="760"
+/>
 
 </div>
