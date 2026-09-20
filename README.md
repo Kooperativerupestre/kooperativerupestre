@@ -1,20 +1,20 @@
 <div align="center">
 
-![](https://capsule-render.vercel.app/api?type=waving&color=0:6d0e0e,50:5a1a5a,100:3d0e5c&height=180&section=header&text=Ko%C3%B6perative%20R%C3%BCpestr%C3%ABn&fontSize=42&fontColor=E8E8E8&animation=fadeIn&fontAlignY=40)
+![](https://capsule-render.vercel.app/api?type=waving\&color=0:6d0e0e,50:5a1a5a,100:3d0e5c\&height=180\&section=header\&text=Ko%C3%B6perative%20R%C3%BCpestr%C3%ABn\&fontSize=42\&fontColor=E8E8E8\&animation=fadeIn\&fontAlignY=40)
 
-**Backend developer · Python · PostgreSQL · C++ · Go**
+**Backend developer · Python · C++ · Go**
 
-Enzo Gonçalves. Self-taught. Looking for my first backend role, remote.
-Based in Brazil (UTC−3) · [domicuslucinox@gmail.com](mailto:domicuslucinox@gmail.com)
+Enzo Gonçalves · Self-taught · Brazil (UTC−3)
+Looking for my first backend role · Remote
 
-![Python](https://img.shields.io/badge/Python-2b2b2b?style=flat-square&logo=python&logoColor=8B3A4A)
-![C++](https://img.shields.io/badge/C%2B%2B-2b2b2b?style=flat-square&logo=cplusplus&logoColor=8B3A4A)
-![Go](https://img.shields.io/badge/Go-2b2b2b?style=flat-square&logo=go&logoColor=8B3A4A)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-2b2b2b?style=flat-square&logo=postgresql&logoColor=8B3A4A)
-![SQLite](https://img.shields.io/badge/SQLite-2b2b2b?style=flat-square&logo=sqlite&logoColor=8B3A4A)
-![Redis](https://img.shields.io/badge/Redis-2b2b2b?style=flat-square&logo=redis&logoColor=8B3A4A)
-![Docker](https://img.shields.io/badge/Docker-2b2b2b?style=flat-square&logo=docker&logoColor=8B3A4A)
-![Linux](https://img.shields.io/badge/Linux-2b2b2b?style=flat-square&logo=linux&logoColor=8B3A4A)
+[domicuslucinox@gmail.com](mailto:domicuslucinox@gmail.com)
+
+![Python](https://img.shields.io/badge/Python-2b2b2b?style=flat-square\&logo=python\&logoColor=8B3A4A)
+![C++](https://img.shields.io/badge/C%2B%2B-2b2b2b?style=flat-square\&logo=cplusplus\&logoColor=8B3A4A)
+![Go](https://img.shields.io/badge/Go-2b2b2b?style=flat-square\&logo=go\&logoColor=8B3A4A)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-2b2b2b?style=flat-square\&logo=postgresql\&logoColor=8B3A4A)
+![Docker](https://img.shields.io/badge/Docker-2b2b2b?style=flat-square\&logo=docker\&logoColor=8B3A4A)
+![Linux](https://img.shields.io/badge/Linux-2b2b2b?style=flat-square\&logo=linux\&logoColor=8B3A4A)
 
 </div>
 
@@ -22,9 +22,11 @@ Based in Brazil (UTC−3) · [domicuslucinox@gmail.com](mailto:domicuslucinox@gm
 
 ## About
 
-I build backends where correctness matters more than features: data integrity enforced by the database, safe behavior under concurrent requests, and clear boundaries between layers.
+I build software around **correctness, explicit boundaries, and testable invariants**.
 
-I also write C++ to understand what runs under the abstractions: memory, ownership, and data structures.
+I tend to start with:
+
+> **What can go wrong, and where should that be prevented?**
 
 ---
 
@@ -32,63 +34,67 @@ I also write C++ to understand what runs under the abstractions: memory, ownersh
 
 ### [Schedule Manager](https://github.com/Kooperativerupestre/Schedule-manager)
 
-Multi-tenant appointment scheduling API. Python · FastAPI · PostgreSQL · Redis · Docker.
+Multi-tenant scheduling API.
 
-**The problem:** two clients must never book the same slot, even when requests arrive at the same moment.
+**Python · FastAPI · PostgreSQL · Redis · Docker**
 
-**Architecture**
+Problems solved:
 
-```mermaid
-flowchart LR
-    Router --> Service --> Log --> Verify["Verify Capabilities"] --> Repository --> DB[(Database)]
-```
-
-**Decisions**
-- Overlaps are rejected by a PostgreSQL `GIST` exclusion constraint, not by application code, so concurrent requests cannot double-book.
-- `psycopg3` (async) with raw SQL and no ORM. Queries stay explicit.
-- Layered architecture with explicit transaction boundaries.
-- Capability-based authorization. Cookie-based JWT authentication with Argon2 password hashing.
-
-**Evidence**
-- 50+ automated tests.
-- The concurrency test runs multiple threads/connections against the same shared resources and checks that they do not produce race conditions.
-
-### [Karkinolution](https://github.com/Kooperativerupestre/Karkinolution)
-
-Creature ecosystem simulator. C++ · Docker. Creatures evolve through genetic mechanisms and act through a weighted decision-making model.
-
-**The problem:** many independent creatures need to find their neighbors quickly, and new behaviors must be added without rewriting existing systems.
-
-**Decisions**
-- Organism state, perception, physiology, and behavior are separate models, so a new behavior does not touch the others.
-- **R\*-tree** and **octree** spatial indexes for neighbor queries instead of scanning every creature.
-- Explicit ownership and lifetime management in C++.
-- Automated tests and continuous integration.
-
-<!--
-Add the benchmark chart here once it exists:
-![R*-tree vs brute force](./assets/rtree-benchmark.png)
--->
-
-### [XanboX](https://github.com/Kooperativerupestre/XanboX)
-
-A sandbox for running commands in a virtual environment. Go (async) · Docker. In development.
-
-**Planned**
-- More explicit error handling
-- Resource control
-- More explicit state control
-- Idempotency using hashes
-- Continuous updates with logs
+* Prevent concurrent double-booking → PostgreSQL `GIST` exclusion constraint.
+* Keep queries explicit → `psycopg3` + raw SQL, no ORM.
+* Control access → capability-based authorization.
+* Validate concurrency → 50+ tests, including concurrent requests.
 
 ---
 
-## How I use AI
+### [Karkinolution](https://github.com/Kooperativerupestre/Karkinolution)
 
-I use AI to explore options, generate and expand tests, and review code. Architecture, correctness, and validation stay my decisions.
+C++ ecosystem simulator focused on deterministic state and systems design.
+
+**C++23 · CMake · Asio · GoogleTest · Docker**
+
+Problems solved:
+
+* Deterministic state mutation → `Physiology` × `Motor`.
+* Avoid `O(n²)` spatial searches → R*-tree for static data, octree for moving data.
+* Handle irregular TCP byte streams → custom binary protocol + deserializer.
+* Keep HashMap + R*-tree consistent → service boundary + unit tests.
+* Enforce code standards → CLI + formatting/lint/check tooling.
+* Keep agents within project conventions → concise repository skills.
+* Enforce bounded values → `LimitedValue` + 16 unit tests.
+
+---
+
+### [XanboX](https://github.com/Kooperativerupestre/XanboX)
+
+Backend for executing code inside isolated Docker containers.
+
+**Go · Docker · PostgreSQL**
+
+Problems explored:
+
+* Separate application IDs from Docker IDs.
+* Model execution state explicitly.
+* Capture stdout/stderr.
+* Handle failures across database and Docker.
+* Make lifecycle operations idempotent.
+
+---
+
+## How I Work
+
+I prefer **invariants over conventions**, **explicit boundaries over hidden behavior**, and **tests that attack failure cases rather than only happy paths**.
+
+---
+
+## AI
+
+I use AI for exploration, test generation, API research, and code review.
+
+Architecture, trade-offs, and validation remain my responsibility.
 
 ---
 
 ## Contact
 
-- Email: [domicuslucinox@gmail.com](mailto:domicuslucinox@gmail.com)
+[domicuslucinox@gmail.com](mailto:domicuslucinox@gmail.com)
