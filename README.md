@@ -64,23 +64,6 @@ Problems solved:
 * Enforce bounded values → `LimitedValue` + 16 unit tests.
 
 ---
-
-### [XanboX](https://github.com/Kooperativerupestre/XanboX)
-
-Backend for executing code inside isolated Docker containers.
-
-**Go · Docker · PostgreSQL**
-
-Problems explored:
-
-* Separate application IDs from Docker IDs.
-* Model execution state explicitly.
-* Capture stdout/stderr.
-* Handle failures across database and Docker.
-* Make lifecycle operations idempotent.
-
----
-
 ## How I Work
 
 I prefer **invariants over conventions**, **explicit boundaries over hidden behavior**, and **tests that attack failure cases rather than only happy paths**.
